@@ -2,12 +2,20 @@ body {
   background-color: #385170;
   font-family: "Lora", serif;
 }
+h1 {
+  font-weight: bolder;
+  padding-top: 5px;
+}
+ul {
+  list-style: none;
+  font-weight: bold;
+}
 
 .wholePage {
-  border: 300px #407088;
+  border: 400px #407088;
   border-style: solid;
   border-width: 2px;
-  max-width: 400px;
+  max-width: 600px;
   border-radius: 3px;
   text-align: center;
   margin: 0 auto;
