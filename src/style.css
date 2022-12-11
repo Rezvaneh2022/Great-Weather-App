@@ -1,3 +1,33 @@
 body {
-  background-color: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-color: #385170;
+  font-family: "Lora", serif;
+}
+
+.wholePage {
+  border: 300px #407088;
+  border-style: solid;
+  border-width: 2px;
+  max-width: 400px;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 26px;
+  padding: 10px;
+}
+
+.searchBar {
+  border: solid;
+  border-radius: 5px;
+  background-color: #5585b5;
+}
+.searchButton {
+  border: solid;
+  border-radius: 5px;
+  background: #5585b5;
+}
+.searchBar:hover {
+  background-color: #a2a8d3;
+}
+.searchButton:hover {
+  background-color: #a2a8d3;
 }
