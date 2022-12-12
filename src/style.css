@@ -4,7 +4,6 @@ body {
 }
 h1 {
   font-weight: bolder;
-  padding-top: 5px;
 }
 ul {
   list-style: none;
@@ -23,6 +22,9 @@ ul {
   padding: 10px;
 }
 
+.firstSection {
+  padding-top: 5px;
+}
 .searchBar {
   border: solid;
   border-radius: 5px;
@@ -38,4 +40,7 @@ ul {
 }
 .searchButton:hover {
   background-color: #a2a8d3;
+}
+.buttomSection {
+  padding-top: 15px;
 }
