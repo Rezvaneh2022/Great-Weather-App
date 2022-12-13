@@ -19,11 +19,20 @@ let days = [
   "Saturday",
 ];
 let day = days[date.getDay()];
-
 showTime.innerHTML = `${day} ${hours}:${minutes}`;
 
+///////////////////////////////////////////
 function displayTemperature(response) {
   console.log(response);
+  let temperatureIs = document.querySelector("#temperature");
+  let humidityIs = document.querySelector("#humidity");
+  let windIs = document.querySelector("#wind");
+  let iconIs = document.querySelector("#icon");
+
+  temperatureIs.innerHTML = Math.round(response.data.temperature.current);
+  humidityIs.innerHTML = response.data.temperature.humidity;
+  windIs.innerHTML = Math.round(response.data.wind.speed);
+  iconIs.setAttribute("src", `${response.data.condition.icon_url}`);
 }
 
 function searching(event) {
@@ -33,12 +42,10 @@ function searching(event) {
   h1.innerHTML = cityName.value;
 }
 
-function search() {
-  let apiKey = "588oc041a6e953f45658b7911bf5tb98";
-  let city = "London";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayTemperature);
-}
+let apiKey = "588oc041a6e953f45658b7911bf5tb98";
+let city = "London";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayTemperature);
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", searching);

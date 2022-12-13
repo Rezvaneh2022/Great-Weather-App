@@ -38,19 +38,32 @@
         </span>
         <div>
           <div class="row firstSection">
-            <div class="col-4">icon</div>
+            <div class="col-4">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+                alt=""
+                id="icon"
+              />
+            </div>
             <div class="col-4">
               <h1>Tehran</h1>
             </div>
             <div class="col-4">
-              <div id="date">Friday 10:45</div>
+              <div id="date" class="date">Friday 10:45</div>
             </div>
           </div>
+
+          <h2>
+            <span id="temperature">12</span>
+            °C|°F
+          </h2>
           <ul>
-            <li>12°C°F</li>
-            <li>Precipitation: 1%</li>
-            <li>Humidity: 53%</li>
-            <li>Wind: 8 km/h</li>
+            <li>
+              Humidity:
+              <span id="humidity">53%</span>
+            </li>
+
+            <li>Wind: <span id="wind">8</span> km/h</li>
           </ul>
         </div>
         <div class="buttomSection">

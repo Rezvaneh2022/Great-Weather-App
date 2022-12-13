@@ -2,11 +2,6 @@ body {
   background-color: #385170;
   font-family: "Lora", serif;
 }
-
-body {
-  background-color: #385170;
-  font-family: "Lora", serif;
-}
 h1 {
   font-weight: bolder;
 }
@@ -26,6 +21,13 @@ ul {
   margin: 0 auto;
   margin-top: 26px;
   padding: 10px;
+}
+
+.date {
+  padding-top: 48px;
+  font-size: larger;
+  font-weight: bolder;
+  padding-right: 20px;
 }
 
 .firstSection {
