@@ -1,5 +1,4 @@
 let date = new Date();
-let showTime = document.querySelector("#date");
 
 let hours = date.getHours();
 if (hours < 10) {
@@ -19,35 +18,65 @@ let days = [
   "Saturday",
 ];
 let day = days[date.getDay()];
-showTime.innerHTML = `${day} ${hours}:${minutes}`;
+
+let dateElement = document.querySelector("#date");
+dateElement.innerHTML = `${day} ${hours}:${minutes}`;
 
 ///////////////////////////////////////////
 function displayTemperature(response) {
   console.log(response);
   let temperatureIs = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
   let humidityIs = document.querySelector("#humidity");
   let windIs = document.querySelector("#wind");
   let iconIs = document.querySelector("#icon");
 
   temperatureIs.innerHTML = Math.round(response.data.temperature.current);
+  cityElement.innerHTML = response.data.city;
   humidityIs.innerHTML = response.data.temperature.humidity;
   windIs.innerHTML = Math.round(response.data.wind.speed);
   iconIs.setAttribute("src", `${response.data.condition.icon_url}`);
 }
 
-function searching(event) {
+function handleSubmit(event) {
   event.preventDefault();
-  let cityName = document.querySelector("#city-input");
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = cityName.value;
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
 }
 
-let apiKey = "588oc041a6e953f45658b7911bf5tb98";
-let city = "London";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "588oc041a6e953f45658b7911bf5tb98";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-let form = document.querySelector("#search-bar");
-form.addEventListener("submit", searching);
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
 
-////////////////
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Berlin");
