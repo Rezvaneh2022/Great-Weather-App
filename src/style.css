@@ -2,10 +2,16 @@ body {
   background-color: #385170;
   font-family: "Lora", serif;
 }
+
+body {
+  background-color: #385170;
+  font-family: "Lora", serif;
+}
 h1 {
   font-weight: bolder;
 }
 ul {
+  padding-left: 0px;
   list-style: none;
   font-weight: bold;
 }

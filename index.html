@@ -25,24 +25,28 @@
     <div class="container">
       <div class="wholePage">
         <span>
-          <form>
-            <input type="text" placeholder="Enter a city" class="searchBar" />
+          <form id="search-bar">
+            <input
+              type="text"
+              placeholder="Enter a city"
+              class="searchBar"
+              autocomplete="off"
+              id="city-input"
+            />
             <input type="submit" value="Search" class="searchButton" />
           </form>
         </span>
         <div>
-            <div class="row firstSection">
+          <div class="row firstSection">
+            <div class="col-4">icon</div>
             <div class="col-4">
-icon            </div>
-              <div class="col-4">
-                <h1>Tehran</h1>
+              <h1>Tehran</h1>
             </div>
-              <div class="col-4">
-                Friday 10:50
+            <div class="col-4">
+              <div id="date">Friday 10:45</div>
             </div>
-</div>
+          </div>
           <ul>
-
             <li>12°C°F</li>
             <li>Precipitation: 1%</li>
             <li>Humidity: 53%</li>
@@ -50,27 +54,14 @@ icon            </div>
           </ul>
         </div>
         <div class="buttomSection">
-       <div class="row">
-    <div class="col col--1of6">
-     1
-    </div>
-    <div class="col col--1of6">
-    2
-    </div>
-    <div class="col col--1of6">
-     3
-    </div>
-    <div class="col col--1of6">
-     4
-    </div>
-    <div class="col col--1of6">
-     5
-    </div>
-    <div class="col col--1of6">
-    6
-    </div>
-  </div>
-  </div>
+          <div class="row">
+            <div class="col col--1of6">1</div>
+            <div class="col col--1of6">2</div>
+            <div class="col col--1of6">3</div>
+            <div class="col col--1of6">4</div>
+            <div class="col col--1of6">5</div>
+            <div class="col col--1of6">6</div>
+          </div>
         </div>
       </div>
     </div>
