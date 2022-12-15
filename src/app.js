@@ -25,13 +25,15 @@ dateElement.innerHTML = `${day} ${hours}:${minutes}`;
 ///////////////////////////////////////////
 function displayTemperature(response) {
   console.log(response);
-  let temperatureIs = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let humidityIs = document.querySelector("#humidity");
   let windIs = document.querySelector("#wind");
   let iconIs = document.querySelector("#icon");
 
-  temperatureIs.innerHTML = Math.round(response.data.temperature.current);
+  celsiusTemperature = response.data.temperature.current;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.city;
   humidityIs.innerHTML = response.data.temperature.humidity;
   windIs.innerHTML = Math.round(response.data.wind.speed);

@@ -63,3 +63,30 @@ ul {
 .buttomSection {
   padding-top: 15px;
 }
+
+.units {
+  line-height: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
+
+.faren {
+  text-decoration: none;
+  color: black;
+}
+
+.weather-temperature {
+  color: black;
+  text-decoration: none;
+  cursor: default;
+  font-size: 40px;
+}
