@@ -1,5 +1,5 @@
 body {
-  background-color: #385170;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   font-family: "Lora", serif;
 }
 h1 {
@@ -47,12 +47,12 @@ ul {
 .searchBar {
   border: solid;
   border-radius: 5px;
-  background-color: #5585b5;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 .searchButton {
   border: solid;
   border-radius: 5px;
-  background: #5585b5;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 .searchBar:hover {
   background-color: #a2a8d3;
