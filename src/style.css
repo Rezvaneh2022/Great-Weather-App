@@ -13,13 +13,14 @@ ul {
 }
 
 .wholePage {
+  background-color: white;
   border: 400px #407088;
   border-style: solid;
   border-width: 2px;
   max-width: 600px;
   min-width: 300px;
 
-  border-radius: 3px;
+  border-radius: 20px;
   text-align: center;
   margin: 0 auto;
   margin-top: 26px;
@@ -46,19 +47,24 @@ ul {
 }
 .searchBar {
   border: solid;
-  border-radius: 5px;
+  border-radius: 4px;
+  border-width: 2px;
   background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
+
+.searchBar:hover {
+  padding: 2px;
+}
+
 .searchButton {
   border: solid;
-  border-radius: 5px;
+  border-radius: 4px;
+  border-width: 2px;
   background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
-.searchBar:hover {
-  background-color: #a2a8d3;
-}
+
 .searchButton:hover {
-  background-color: #a2a8d3;
+  padding: 2px;
 }
 .buttomSection {
   padding-top: 15px;
@@ -89,4 +95,10 @@ ul {
   text-decoration: none;
   cursor: default;
   font-size: 40px;
+}
+.gitLink {
+  text-decoration: none;
+}
+.gitLink:hover {
+  text-decoration: underline;
 }
