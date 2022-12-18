@@ -102,3 +102,7 @@ ul {
 .gitLink:hover {
   text-decoration: underline;
 }
+
+.forcast-temp {
+  font-size: 13px;
+}
