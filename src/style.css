@@ -102,7 +102,10 @@ ul {
 .gitLink:hover {
   text-decoration: underline;
 }
-
-.forcast-temp {
-  font-size: 13px;
+.weather-forecast {
+  text-align: center;
+  margin-top: 5px;
+}
+.weather-forecast-temperature {
+  font-size: 15px;
 }
